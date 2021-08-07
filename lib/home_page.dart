@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
               Icon(
                 icon,
                 size: 30,
-                  color: title==text?Colors.deepPurple:Colors.black
+                  color: title==text?Colors.white:Colors.black
               ),
               Text(title,style: TextStyle(
                 color: title==text?Colors.white:Colors.black,
