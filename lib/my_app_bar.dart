@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class MyAppBar extends StatelessWidget {
-  const MyAppBar({
-    Key? key,
-  }) : super(key: key);
+  final String title;
+  final Color backClr;
+   MyAppBar({required this.title,this.backClr=Colors.grey}) ;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey,
+      color: backClr,
       padding: const EdgeInsets.all(10.0),
       child: Row(
         children: [
@@ -21,7 +21,7 @@ class MyAppBar extends StatelessWidget {
                   child: Icon(Icons.arrow_back_ios_rounded))),
           Expanded(
             child: Text(
-              "My App",
+              title,
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
             ),
