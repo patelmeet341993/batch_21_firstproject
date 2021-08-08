@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'my_app_bar.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -33,7 +35,7 @@ class _HomePageState extends State<HomePage> {
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
-          getAppBar(),
+          MyAppBar(),
           Expanded(
               child: Container(
                 width: MediaQuery.of(context).size.width,
@@ -113,36 +115,6 @@ class _HomePageState extends State<HomePage> {
     ));
   }
 
-  Widget getAppBar() {
-    return Container(
-      color: Colors.grey,
-      padding: const EdgeInsets.all(10.0),
-      child: Row(
-        children: [
-          InkWell(
-              onTap: () {
-                print("on tap");
-              },
-              child: Padding(
-                  padding: EdgeInsets.only(right: 10),
-                  child: Icon(Icons.arrow_back_ios_rounded))),
-          Expanded(
-            child: Text(
-              "My App",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-            ),
-          ),
-          Icon(Icons.supervised_user_circle),
-          SizedBox(
-            width: 10,
-          ),
-          Icon(Icons.menu),
-          SizedBox(
-            width: 10,
-          ),
-        ],
-      ),
-    );
-  }
+
 }
+
