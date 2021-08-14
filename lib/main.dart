@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stack_column/home_page.dart';
-import 'package:stack_column/my_app_bar.dart';
-import 'package:stack_column/second_page.dart';
+import 'package:stack_column/navigation_routes/first_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: FirstPage(),
     );
   }
 }
